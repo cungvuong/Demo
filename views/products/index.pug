@@ -1,0 +1,43 @@
+extends ../layouts/commom
+
+block content
+	h1 Products
+	script
+			include javascript/custom2.js
+	form.ml-auto(action="/product", method="POST")
+			input(type="text", name="name_cat", class="form-control").input_search
+			br
+			button.btn.btn-primary Search
+	br
+	ul(class="row row-cols-4").div_ul
+		each product in products
+			li.div_li
+				.div_image
+					img(src=product.image)
+
+					br
+
+					b=product.name
+
+					br
+
+					span=product.description
+
+					br 
+
+					a.button_add.btn.btn-primary(href="/cart/add/" + product.id) Add to Cart
+	nav()
+	- var start = startOne;
+	- var end = endOne;
+		ul.pagination
+			li.page-item(id="previous")
+				a.page-link(href="/product?name_cat="+ (start - 1)) Previous
+			while start<=end
+				- start++
+				li
+					a.page-link.ok-link(href="/product?name_cat=" + start) #{start}
+			li.page-item(id="next")
+				a.page-link(href="/product?name_cat="+ (start + 1)) Next
+			
+
+

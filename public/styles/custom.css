@@ -1,0 +1,70 @@
+body{
+	width: 100%;
+}
+
+*{
+	margin:0;
+	padding: 0;
+	size: 30px;
+}
+
+.menu {
+	display: inline-block;
+	list-style: none;
+	background-color: #798798;
+}
+
+.menuli {
+	float: left;
+}
+
+.div_ul {
+	display: flex;
+	width: 1200px;
+	height: auto;
+}
+
+.div_li {
+	list-style: none;
+	display: block;
+	margin-left: 0px;
+	margin-bottom: 20px;
+}
+
+.div_image {
+	display: block;
+	width: 252px;
+	height: 370px auto;
+	margin-left: 20px;
+	border: 1px solid green;
+	padding: 10px;
+}
+
+.div_image img {
+	width: 250px;
+	padding: 0px;
+	margin: -10px 0px 0px -10px;
+}
+
+.button_add {
+	margin: 10px;
+	margin-left: 70px;
+}
+
+.input_search {
+	width: 100px;
+}
+
+.ok-link:active {
+	color: red;
+}
+
+.quantity {
+	color: red;
+	position: absolute;
+    margin-left: 3px;
+    margin-top: -10px;
+    border: 1px solid red;
+    border-radius: 10px;
+    width: 23px;
+}

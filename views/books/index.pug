@@ -1,0 +1,22 @@
+extends ../layouts/commom
+
+block content
+		h1 Vuong Cung Bookcss
+		a.btn.btn-primary(href="/book/create") Create
+		form.ml-auto(action="/book/search", method="GET")
+			input(type="text", name="q", class="form-control")
+			button.btn.btn-primary Search
+		table.table
+			tr
+				th Avatar
+				th Name
+				th Phone
+				th View
+			each book in books
+				tr
+					td
+						img(src=book.avatar, width="64", style="border-radius: 999px")
+					td= book.name
+					td= book.phone
+					td
+						a.btn.btn-light(href="/book/" + book.id) View

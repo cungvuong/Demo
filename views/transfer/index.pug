@@ -1,0 +1,14 @@
+extends ../layouts/commom
+
+block content
+	h1 Create Transfer
+
+	form(action="/transfer/create", method="POST")
+		.form-group
+			label(for="account") Account
+			input#account.form-control(type="text", name="accountId")
+		.form-group
+			label(for="amount") Phone
+			input#amount.form-control(type="number", name="amount")
+
+		button.btn.btn-primary.mt-1 Transfer

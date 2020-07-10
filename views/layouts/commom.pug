@@ -1,0 +1,23 @@
+html
+	head
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/styles/custom.css" type="text/css">
+	body
+		ul.menu
+			li.menuli.active.btn.btn-light
+				a.nav-link(href='/') Vuong Cung
+			li.menuli.active.btn.btn-light
+				a.nav-link(href='/') Home
+			li.menuli.btn.btn-light
+				a.nav-link(href='/book') Books
+			li.menuli.active.btn.btn-light
+				a.nav-link(href='/') Products
+			li.menuli.btn.btn-light
+				a.nav-link(href='/book') Cart
+					if countTotal
+						span.quantity= countTotal
+		if  book
+			p= book.name
+
+		.container.pt-5
+			block content
